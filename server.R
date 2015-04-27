@@ -2,7 +2,7 @@ library(shiny)
 
 MMI<- function (feel) {
         returnMessage <- "Nothing entered yet."
-        if (feel=="Barely sensed only by a very few people."){
+        if (identical(feel,"Barely sensed only by a very few people.")){
                 returnMessage<-"The MMI scale is I: Imperceptible"
         }
         else if (feel=="Felt only by a few people at rest in houses or on upper floors."){
@@ -35,7 +35,7 @@ MMI<- function (feel) {
         else if(feel=="Most buildings are damaged and many buildings are destroyed."){
                 returnMessage<-"The MMI scale is XI: Devastating"
         }
-        else if (feel="All buildings are damaged and most buildings are destroyed."){
+        else if (feel=="All buildings are damaged and most buildings are destroyed."){
                 returnMessage<-"The MMI scale is XII: Completely devastating"
         }
         returnMessage
@@ -48,13 +48,3 @@ shinyServer(
   }
 )
 
-
-
-
-
-MM 7: Damaging	General alarm. People experience difficulty standing. Furniture and appliances are shifted. Substantial damage to fragile or unsecured objects. A few weak buildings are damaged.
-MM 8: Heavily damaging	Alarm may approach panic. A few buildings are damaged and some weak buildings are destroyed.
-MM 9: Destructive	Some buildings are damaged and many weak buildings are destroyed.
-MM 10: Very destructive	Many buildings are damaged and most weak buildings are destroyed.
-MM 11: Devastating	Most buildings are damaged and many buildings are destroyed.
-MM 12: Completely devastating	All buildings are damaged and most buildings are destroyed.
