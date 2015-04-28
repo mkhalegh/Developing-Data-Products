@@ -2,14 +2,16 @@
 title       : Modified Mercally Intensity Scale Identifier
 subtitle    : How did you feel it?
 author      : Mona Khaleghy Rad
+output      : html_document
+runtime     : shiny
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [shiny,interactive]            # {mathjax, quiz, bootstrap}
-mode        : standalone # {standalone, draft}
-ext_widgets : {rCharts: [libraries/nvd3]}
-github      : {user: mkhalegh, repo: Developing-Data-Products}
+widgets     : [shiny, interactive]        # {mathjax, quiz, bootstrap}
+mode        : standalone  # {standalone, draft, selfcontained}
+knit        : slidify::knit2slides
+theme       : united
 ---
 
 ## What is Modified Mercalli Intensity?
@@ -27,7 +29,7 @@ github      : {user: mkhalegh, repo: Developing-Data-Products}
 * It tells you the coresponding Mercalli Intensity
 * Simple and convenient!
 
----&interactive
+--- &interactive
 
 ## The App
 
